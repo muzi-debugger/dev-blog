@@ -6,7 +6,8 @@ class Post(models.Model):
     body = models.TextField()
     slug = models.SlugField() # for url
     date = models.DateTimeField(auto_now_add=True)
-    last_updated = models.DateTimeField(auto_now=True)
+
+
 
     def __str__(self):
         return self.title
