@@ -8,34 +8,69 @@ body {
     min-height: 100vh;
     background-color: black;
     color: whitesmoke;
-    font-size: 3rem;
+    font-size: 1.2rem; /* Adjusted for readability */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
+    padding: 1rem;
 }
 
 nav {
     padding: 1rem;
     background-color: #44B78B;
     color: white;
-    font-size: 2.5rem;
+    font-size: 2rem; /* Reduced size for better proportion */
+    text-align: center;
 }
 
 main {
     flex-grow: 1;
-    display: grid;
-    place-content: center;
+    max-width: 800px; /* Limits content width for better readability */
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #222; /* Slight contrast for content area */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-h1,
-p {
+h1 {
+    font-size: 2.5rem; /* Enhanced size for main heading */
     text-align: center;
+    color: #81dbb8;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #5cb68a;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    text-align: justify; /* Aligns paragraphs neatly */
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+ul {
+    list-style-type: disc;
+    margin: 1rem 2rem; /* Proper spacing for list items */
+    padding-left: 1.5rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
 }
 
 a {
     text-decoration: none;
     color: #81dbb8;
+    transition: opacity 0.3s ease-in-out;
 }
 
 a:hover {
-    opacity: .85;
+    opacity: 0.85;
 }

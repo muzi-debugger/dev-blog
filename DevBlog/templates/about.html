@@ -1,19 +1,47 @@
-<!DOCTYPE html>
-{%load static%}
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About Page</title>
-        <link rel="stylesheet" href="{%static 'css/style.css'%}">
-    </head>
-    <body>
-        <h1>About Page</h1>
-        <p>Welcome to the about page</p>
-        <p>Check out my <a href="/">Home </a> Page</p>
-    </body>
-    <footer>
-        <p>Copyright© 2025 DevBlog. All rights reserved.</p>
-    </footer>
-    </html>
-</html>
+{% extends 'layout.html' %}
+{% block title %}
+    About
+{% endblock %}
+{% block content %}
+    <h1>About</h1>
+    <p>This is a blog for developers where ideas are shared, challenges are discussed, and solutions are crafted.</p>
+
+    <h2>Our Mission</h2>
+    <p>
+        Our mission is to foster a collaborative environment where developers from all walks of life can exchange knowledge, 
+        share their experiences, and grow together. We aim to be the go-to resource for troubleshooting common issues, 
+        exploring programming languages, and discovering the best tools for various development scenarios.
+    </p>
+
+    <h2>What We Cover</h2>
+    <p>
+        This blog serves as a hub for a wide range of topics, including:
+    </p>
+    <ul>
+        <li>Programming tips and best practices.</li>
+        <li>Deep dives into popular programming languages like Python, JavaScript, Java, and more.</li>
+        <li>Solutions to common development challenges.</li>
+        <li>Recommendations on tools and frameworks for specific tasks.</li>
+        <li>Discussions on emerging technologies and trends in software development.</li>
+    </ul>
+
+    <h2>Who Is This Blog For?</h2>
+    <p>
+        Whether you are a seasoned developer looking to stay updated with the latest trends or a beginner seeking guidance, 
+        this blog has something for everyone. We cater to:
+    </p>
+    <ul>
+        <li>Software developers and engineers.</li>
+        <li>Data scientists and analysts.</li>
+        <li>Students and coding enthusiasts.</li>
+        <li>Anyone passionate about technology and problem-solving.</li>
+    </ul>
+
+    <h2>Join the Conversation</h2>
+    <p>
+        We believe that learning is a two-way street. Share your knowledge, ask questions, and connect with other developers 
+        by commenting on posts or contributing guest articles. Together, we can build a stronger developer community.
+    </p>
+
+    <p>Happy coding!</p>
+{% endblock %}
