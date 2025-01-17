@@ -20,8 +20,9 @@ from DevBlog import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.homePage),
-    path('about/', views.aboutPage),
-    path('posts/', views.post_list),
+    path('', views.homePage, name='home'),
+    path('about/', views.aboutPage, name='about'),
+    path('posts/', views.post_list, name='post_list'),
+    path('<slug:slug>', views.post_page, name='page'),
 
 ]
