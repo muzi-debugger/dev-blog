@@ -16,7 +16,9 @@
             <a href="/">
                 <span role="img" aria-label="Home">🏠</span>
             <a href="/about/">About</a> |
-            <a href="{% url 'post_list' %}">Posts</a>
+            <a href="{% url 'post_list' %}">Posts</a> |
+            <a href="{%url 'user:register' %}">Create Account</a> |
+
             <main>
                 {% block conent %}
                 {% endblock %}
