@@ -19,7 +19,7 @@ from django.urls import path, include
 from DevBlog import views
 from django.conf.urls.static import static 
 from django.conf import settings
-
+from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,7 +29,7 @@ urlpatterns = [
     path('new-post/', views.new_post, name='new_post'),
     path('<slug:slug>', views.post_page, name='page'),
     path('user/', include('user.urls')),
-
+    path('logout/', LogoutView.as_view(next_page='home'), name='logout'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
