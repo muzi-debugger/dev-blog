@@ -109,3 +109,28 @@ a:hover {
 .logout-button:hover {
     opacity: .85;
 }
+
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 2rem auto;
+}
+
+.carousel {
+    display: flex;
+    gap: 1rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 300px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}

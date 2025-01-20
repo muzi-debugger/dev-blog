@@ -12,7 +12,7 @@ def aboutPage(request):
     return render(request, 'about.html')
 
 def post_list(request):
-    posts = Post.objects.all().order_by('-date')
+    posts = Post.objects.all().order_by('-date')[:5]
     return render(request, 'posts/posts_list.html', {'post': posts})
 
 

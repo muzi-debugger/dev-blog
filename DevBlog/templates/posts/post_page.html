@@ -4,10 +4,9 @@
 {% endblock %}
 {% block content %}
     <section>
-        
         <img
             class="banner"
-            src="{{ post.banner.url }}" alt="{{ post.title }}"/>
+            src="{{ post.image.url }}" alt="Image for {{ post.title }}" class="carousel-image">
         <h1>{{ post.title }}</h1>
         <p>Posted on {{ post.date }}</p>
         <p>{{ post.body }}</p>
