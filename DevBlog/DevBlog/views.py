@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .models import Post
 from django.contrib.auth.decorators import login_required
@@ -27,7 +26,9 @@ def new_post(request):
         form = forms.CreatePost(request.POST, request.FILES)
         if form.is_valid():
             # save with user
-            form.save()
+            new_post = form.save(commit=False)
+            new_post.author = request.user
+            new_post.save()
             return redirect('post_list')
     else:
         form = forms.CreatePost()

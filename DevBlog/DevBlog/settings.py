@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +24,7 @@ SECRET_KEY = 'django-insecure-3#_w0i5b$+4xhzx&iqaq077q)$n^r45ld8g24-3yizs5vv8ay1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -120,11 +119,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+MEDIA_URL = 'media/'
 
-MEDIA_URL = 'media/post_images/default.jpg/'
+MEDIA_ROOT = BASE_DIR / 'media'
+STATIC_ROOT = BASE_DIR / 'assets'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+
+]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
